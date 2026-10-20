@@ -3,54 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Profile Page - Ahad Hashmani</title>
+  <title>Ahad Hashmani | Developer Profile</title>
   <link rel="stylesheet" href="profile-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Ahad Hashmani</h1>
-    <p class="tagline">Aspiring Web Developer & Tech Enthusiast</p>
-  </header>
-
-  <main>
-    <!-- Profile & About Me Section -->
-    <section id="about" class="profile-card">
-      <img 
-        src="https://via.placeholder.com/150" 
-        alt="Profile picture of Ahad Hashmani" 
-        class="profile-img"
-      />
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          Welcome to my profile page! I am a passionate beginner web developer focused on building clean, functional, and responsive web applications. I love turning complex problems into simple and intuitive user interfaces.
-        </p>
+  <div class="container">
+    <!-- Header Card -->
+    <header class="card header-card">
+      <div class="avatar-wrapper">
+        <img src="https://via.placeholder.com/150" alt="Ahad Hashmani" class="avatar" />
       </div>
-    </section>
+      <div class="header-info">
+        <h1>Ahad Hashmani</h1>
+        <p class="tagline"><i class="fa-solid fa-code"></i> Aspiring Web Developer & Tech Enthusiast</p>
+        <div class="badge-group">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">Git & GitHub</span>
+        </div>
+      </div>
+    </header>
 
-    <!-- Skills List Section -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <ul class="skills-list">
-        <li><strong>HTML5 & Semantic Web:</strong> Structuring accessible web documents.</li>
-        <li><strong>CSS3 & Layouts:</strong> Flexbox, Grid, and modern web styling.</li>
-        <li><strong>Git & GitHub:</strong> Version control and project collaboration.</li>
-        <li><strong>JavaScript Basics:</strong> Adding interactive functionality to web applications.</li>
-      </ul>
-    </section>
-  </main>
+    <main>
+      <!-- About Me Card -->
+      <section class="card">
+        <h2><i class="fa-solid fa-user"></i> About Me</h2>
+        <p>
+          Hello! I'm Ahad. I am passionate about building clean, structured, and modern web applications. 
+          Currently focused on mastering frontend technologies, responsive layout design, and Git version control.
+        </p>
+      </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2026 Ahad Hashmani. All rights reserved.</p>
-    <p>
-      <a href="https://github.com/AhadHashmani" target="_blank" rel="noopener noreferrer">
-        Visit My GitHub Profile
+      <!-- Skills Card -->
+      <section class="card">
+        <h2><i class="fa-solid fa-laptop-code"></i> Skills & Proficiency</h2>
+        <ul class="skills-grid">
+          <li class="skill-item">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <div>
+              <strong>HTML5</strong>
+              <p>Semantic structuring & accessibility</p>
+            </div>
+          </li>
+          <li class="skill-item">
+            <i class="fa-brands fa-css3-alt skill-icon"></i>
+            <div>
+              <strong>CSS3</strong>
+              <p>Flexbox, styling & responsive layouts</p>
+            </div>
+          </li>
+          <li class="skill-item">
+            <i class="fa-brands fa-github skill-icon"></i>
+            <div>
+              <strong>Git & GitHub</strong>
+              <p>Version control & online repositories</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="card footer-card">
+      <p>&copy; 2026 Ahad Hashmani. Built with HTML & CSS.</p>
+      <a href="https://github.com/AhadHashmani" target="_blank" rel="noopener" class="github-btn">
+        <i class="fa-brands fa-github"></i> View GitHub Profile
       </a>
-    </p>
-  </footer>
+    </footer>
+  </div>
 
 </body>
 </html>

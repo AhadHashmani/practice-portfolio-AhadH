@@ -1,4 +1,6 @@
-/* General Reset & Styles */
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,103 +8,157 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
   line-height: 1.6;
-  color: #2d3748;
-  background-color: #f7fafc;
-  padding: 20px;
+  padding: 40px 20px;
+}
+
+.container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Header */
-header {
-  text-align: center;
-  background-color: #2b6cb0;
-  color: #ffffff;
-  padding: 35px 20px;
-  border-radius: 8px;
-  margin-bottom: 25px;
+/* Card Container Styles */
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 5px;
+.card:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+/* Header Section */
+.header-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar-wrapper {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #58a6ff;
+  object-fit: cover;
+}
+
+.header-info h1 {
+  color: #f0f6fc;
+  font-size: 2rem;
+  margin-bottom: 4px;
 }
 
 .tagline {
-  font-size: 1.1rem;
-  color: #ebf8ff;
-}
-
-/* Main Sections */
-section {
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 8px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
-  color: #2b6cb0;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 8px;
-}
-
-/* Profile Picture Card */
-.profile-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #2b6cb0;
-}
-
-.about-text {
-  flex: 1;
-}
-
-/* Skills List */
-.skills-list {
-  list-style-type: square;
-  padding-left: 25px;
-}
-
-.skills-list li {
-  margin-bottom: 10px;
+  color: #8b949e;
   font-size: 1rem;
+  margin-bottom: 12px;
 }
 
-/* Footer */
-footer {
+.badge-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: #21262d;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+/* Section Headings */
+h2 {
+  color: #f0f6fc;
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 i {
+  color: #58a6ff;
+}
+
+/* Skills Layout */
+.skills-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.skill-item {
+  background: #21262d;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  color: #58a6ff;
+}
+
+.skill-item strong {
+  color: #f0f6fc;
+  display: block;
+}
+
+.skill-item p {
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+/* Footer Section */
+.footer-card {
   text-align: center;
-  padding: 20px;
-  color: #718096;
-  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
-footer a {
-  color: #2b6cb0;
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #238636;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.github-btn:hover {
+  background-color: #2ea043;
 }
 
-/* Responsive adjustment for small screens */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
-  .profile-card {
+  .header-card {
     flex-direction: column;
     text-align: center;
   }

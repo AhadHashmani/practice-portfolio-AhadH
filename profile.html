@@ -3,74 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ahad Hashmani | Developer Profile</title>
+  <title>Ahad Hashmani | Portfolio & Profile</title>
   <link rel="stylesheet" href="profile-style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
+  <!-- Top Navigation Header -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="nav-brand"><i class="fa-solid fa-terminal"></i> Ahad Hashmani</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
-    <!-- Header Card -->
-    <header class="card header-card">
+    <!-- Header Hero Card -->
+    <header class="card hero-card">
       <div class="avatar-wrapper">
         <img src="https://via.placeholder.com/150" alt="Ahad Hashmani" class="avatar" />
       </div>
-      <div class="header-info">
+      <div class="hero-info">
         <h1>Ahad Hashmani</h1>
-        <p class="tagline"><i class="fa-solid fa-code"></i> Aspiring Web Developer & Tech Enthusiast</p>
+        <p class="tagline"><i class="fa-solid fa-code"></i> LaunchCode Software Development Student | M.S. Data Science Candidate</p>
+        <p class="sub-tagline"><i class="fa-solid fa-location-dot"></i> Austin, TX • <i class="fa-solid fa-envelope"></i> ahadhashmani@utexas.edu</p>
+        
         <div class="badge-group">
-          <span class="badge">HTML5</span>
-          <span class="badge">CSS3</span>
-          <span class="badge">Git & GitHub</span>
+          <span class="badge">LaunchCode Student</span>
+          <span class="badge">Python & SQL</span>
+          <span class="badge">LLM Orchestration</span>
+          <span class="badge">ETL Infrastructure</span>
+          <span class="badge">Git / GitHub</span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="https://github.com/AhadHashmani" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/ahadhashmani/" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- About Me Card -->
-      <section class="card">
+      <!-- About Me Section -->
+      <section id="about" class="card">
         <h2><i class="fa-solid fa-user"></i> About Me</h2>
         <p>
-          Hello! I'm Ahad. I am passionate about building clean, structured, and modern web applications. 
-          Currently focused on mastering frontend technologies, responsive layout design, and Git version control.
+          Data-driven analyst and <strong>M.S. Data Science candidate at UT Austin</strong> with experience in financial-services analytics, behavioral data, KPI tracking, and friction diagnoses. Hands-on experience applying AI (Claude API, LLM orchestration, agentic workflows) to automate analysis and optimize software development pipelines.
         </p>
       </section>
 
-      <!-- Skills Card -->
-      <section class="card">
-        <h2><i class="fa-solid fa-laptop-code"></i> Skills & Proficiency</h2>
-        <ul class="skills-grid">
-          <li class="skill-item">
-            <i class="fa-brands fa-html5 skill-icon"></i>
-            <div>
-              <strong>HTML5</strong>
-              <p>Semantic structuring & accessibility</p>
+      <!-- Education Section -->
+      <section id="education" class="card">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Education & Programs</h2>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>LaunchCode</h3>
+            <span class="date">Present</span>
+          </div>
+          <p class="role">Software Development Student</p>
+          <p>Enrolled in intensive computer science and web development curriculum covering foundational software engineering principles, web development (HTML, CSS, JavaScript), and modern development workflows.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>The University of Texas at Austin</h3>
+            <span class="date">Aug 2026 – May 2027</span>
+          </div>
+          <p class="role">M.S. Data Science</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>The University of Texas at Austin</h3>
+            <span class="date">May 2026 | GPA: 3.7</span>
+          </div>
+          <p class="role">B.S. Economics | Computational Engineering | Data Science</p>
+        </div>
+      </section>
+
+      <!-- Professional Experience Section -->
+      <section id="experience" class="card">
+        <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+        
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>FIFA World Cup 26</h3>
+            <span class="date">May 2026 – Jul 2026</span>
+          </div>
+          <p class="role">Operations and Analytics Intern (Safety / Security) — Houston, TX</p>
+          <ul>
+            <li>Analyzed fan march logistics, PSA throughput, and metro station train data using Python (Matplotlib, Seaborn, Plotly); translated findings into visual recommendations for HPD and security leads.</li>
+            <li>Monitored FIFA logistics app and Lenovo field devices in real-time, diagnosing sync issues and resolving user friction during matchdays.</li>
+            <li>Coordinated VIP/VVIP movement logistics across safety, transfer, and stadium-access stakeholders.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>Axiom Finance (Fintech Startup)</h3>
+            <span class="date">Jan 2025 – May 2026</span>
+          </div>
+          <p class="role">Data Engineer / Data Analyst — Austin, TX</p>
+          <ul>
+            <li>Architected production ETL infrastructure (Python, Apache Airflow) across 10M+ daily records.</li>
+            <li>Leveraged Claude API to optimize data workflows, enabling 30% faster analytics cycles for BI and KPI reporting.</li>
+            <li>Analyzed financial datasets (Python, SQL) to surface revenue trends, informing C-suite executive strategy.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>FoodScope AI</h3>
+            <span class="date">May 2025 – Jul 2025</span>
+          </div>
+          <p class="role">Data Analyst Intern — Remote</p>
+          <ul>
+            <li>Deployed Python ML pipelines and SQL workflows; automated marketing collateral to reduce campaign time-to-market by 40%.</li>
+            <li>Analyzed consumer behavior datasets (RStudio, SQL) to identify target market segments and purchase drivers.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="card">
+        <h2><i class="fa-solid fa-laptop-code"></i> Technical Projects & Research</h2>
+        <div class="project-grid">
+          
+          <div class="project-card">
+            <h3>Maxel Lab (UPenn)</h3>
+            <span class="project-subtitle">Data Systems Research Fellowship</span>
+            <p>Provided data science research support across AI domains, applying statistical analysis and pipeline development to accelerate workflows for multidisciplinary researchers.</p>
+          </div>
+
+          <div class="project-card">
+            <h3>NVIDIA Developer Program</h3>
+            <span class="project-subtitle">AI Robotics Orchestration Platform</span>
+            <p>Integrated NVIDIA Isaac Sim 6G tools with a multi-turn Claude AI agent in a full-stack application (FastAPI, Streamlit, PostgreSQL) deployed with Docker across 3 OS models.</p>
+          </div>
+
+          <div class="project-card">
+            <h3>Spatiotemporal E. coli Modeling</h3>
+            <span class="project-subtitle">UT Austin Computational Research</span>
+            <p>Engineered predictive health risk models (weather API, 200K+ records) identifying 24% elevated exposure zones; designed visualizations to prioritize intervention strategy.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Technical Skills Section -->
+      <section id="skills" class="card">
+        <h2><i class="fa-solid fa-gears"></i> Technical Skills & Competencies</h2>
+        <div class="skills-categories">
+          
+          <div class="skill-category">
+            <h4><i class="fa-solid fa-code"></i> Languages & Frameworks</h4>
+            <div class="tag-cloud">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>R</span>
+              <span>JavaScript</span>
+              <span>Rust</span>
+              <span>C++</span>
+              <span>HTML5/CSS3</span>
+              <span>FastAPI</span>
+              <span>Streamlit</span>
             </div>
-          </li>
-          <li class="skill-item">
-            <i class="fa-brands fa-css3-alt skill-icon"></i>
-            <div>
-              <strong>CSS3</strong>
-              <p>Flexbox, styling & responsive layouts</p>
+          </div>
+
+          <div class="skill-category">
+            <h4><i class="fa-solid fa-database"></i> Systems & AI Tools</h4>
+            <div class="tag-cloud">
+              <span>Anthropic Claude API</span>
+              <span>LLM Orchestration</span>
+              <span>Apache Airflow</span>
+              <span>Snowflake</span>
+              <span>SQLite</span>
+              <span>Git & GitHub</span>
+              <span>Docker</span>
+              <span>NVIDIA Isaac Sim</span>
             </div>
-          </li>
-          <li class="skill-item">
-            <i class="fa-brands fa-github skill-icon"></i>
-            <div>
-              <strong>Git & GitHub</strong>
-              <p>Version control & online repositories</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section id="contact" class="card">
+        <h2><i class="fa-solid fa-paper-plane"></i> Contact Me</h2>
+        <form action="#" method="POST" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
             </div>
-          </li>
-        </ul>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
       </section>
     </main>
 
     <!-- Footer -->
     <footer class="card footer-card">
-      <p>&copy; 2026 Ahad Hashmani. Built with HTML & CSS.</p>
-      <a href="https://github.com/AhadHashmani" target="_blank" rel="noopener" class="github-btn">
-        <i class="fa-brands fa-github"></i> View GitHub Profile
-      </a>
+      <p>&copy; 2026 Ahad Hashmani. Built with HTML, CSS, and GitHub Pages.</p>
     </footer>
   </div>
 

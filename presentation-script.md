@@ -10,7 +10,7 @@ At the top of the HTML, the document type tells the browser to use modern HTML. 
 
 The navigation bar is inside a `nav` element. It has links to the About, Education, Experience, Projects, Skills, and Contact sections. Each link points to an `id` on a section farther down the same page, so clicking it takes the visitor to that section.
 
-The introduction is in a `header`. It shows my name, student and career information, a few skill labels, and links to GitHub and LinkedIn. The main content is inside `main`, and each topic is in its own `section`. The Education and Experience sections use headings, dates, roles, and lists. The Projects section has three project descriptions. The Skills section groups tools and languages into categories.
+The introduction is in a `header`. It shows my profile photo next to my name, student and career information, a few skill labels, and links to GitHub and LinkedIn. The main content is inside `main`, and each topic is in its own `section`. The Education and Experience sections use headings, dates, roles, and lists. The Projects section has three project descriptions. The Skills section groups tools and languages into categories.
 
 The Contact section contains a form with fields for a name, email, and message. The labels are connected to their fields with matching `for` and `id` values, which helps identify what each field is for. The `required` attribute asks the browser to check that each field is filled in. Right now, the form is only a visual example: it does not send a message because it has no form-processing service connected. At the bottom, the `footer` contains copyright and project information.
 

@@ -1,6 +1,6 @@
 # Three-Minute Portfolio Presentation Script
 
-*About 390 words; approximately three minutes at a steady speaking pace.*
+*About 400 words; approximately three minutes at a steady speaking pace.*
 
 ## Script
 
@@ -10,10 +10,10 @@ At the top of the HTML, the document type tells the browser to use modern HTML. 
 
 The navigation bar is inside a `nav` element. It has links to the About, Education, Experience, Projects, Skills, and Contact sections. Each link points to an `id` on a section farther down the same page, so clicking it takes the visitor to that section.
 
-The introduction is in a `header`. It shows my profile photo next to my name, student and career information, a few skill labels, and links to GitHub and LinkedIn. The main content is inside `main`, and each topic is in its own `section`. The Education and Experience sections use headings, dates, roles, and lists. The Projects section has three project descriptions. The Skills section groups tools and languages into categories.
+The introduction is in a `header`. It shows my profile photo next to my name, a short description of my work, a few skill labels, and links to my experience and email. A side panel highlights my current Togetherwork role. The main content is inside `main`, and each topic is in its own `section`. The Education section presents my current studies, while Experience uses headings, dates, roles, company logos, and lists. The Togetherwork entry describes building Power BI and Sigma dashboards, translating reporting needs from different teams, and participating in product planning. The Projects section has three project descriptions, and the Skills section groups tools and languages into categories.
 
-The Contact section contains a form with fields for a name, email, and message. The labels are connected to their fields with matching `for` and `id` values, which helps identify what each field is for. The `required` attribute asks the browser to check that each field is filled in. Right now, the form is only a visual example: it does not send a message because it has no form-processing service connected. At the bottom, the `footer` contains copyright and project information.
+The Contact section provides direct email, LinkedIn, and GitHub links instead of a form that would need a separate service to send messages. At the bottom, the `footer` contains copyright and project information.
 
-The CSS file begins with rules for the whole page, such as the font, text color, dark background, and line spacing. A selector like `body` targets the body element, while a class selector like `.card` targets any element with that class. The card rule gives sections a slightly lighter background, a border, rounded corners, padding, and space below them. Other rules style headings, links, skill labels, project sections, and form fields. Hover rules change the appearance of links and the button when the visitor points at them. The `timeline-header` uses Flexbox to place a heading and date next to each other.
+The CSS begins with a small set of custom color variables for the dark background, cards, text, and teal accent. This makes the color scheme easier to keep consistent. A selector like `body` targets the whole page, while a class selector like `.card` targets elements with that class. The cards use subtle borders, rounded corners, and spacing to separate sections without adding clutter. The experience and project areas use CSS Grid and Flexbox to arrange information neatly. Hover and focus styles help show which links are interactive.
 
-Finally, the media query applies a couple of layout changes when the screen is 600 pixels wide or less, making the navigation and timeline easier to view on smaller screens. Overall, I used HTML to organize the information and CSS to make it readable and consistent. Thank you.
+Finally, media queries change the layout on smaller screens so the columns stack and the navigation fits a phone. There is also a reduced-motion setting for visitors who prefer fewer animations. Overall, the HTML organizes the portfolio, and the CSS creates a consistent, responsive design. Thank you.

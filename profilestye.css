@@ -374,11 +374,17 @@ h4 {
   object-fit: cover;
 }
 
-.text-logo {
-  color: #ffffff;
-  background: linear-gradient(135deg, #6c4df6, #18a6a6);
-  font-size: 1.5rem;
-  font-weight: 800;
+.fifa-logo {
+  width: 58px;
+  height: 74px;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.fifa-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .date {
@@ -578,6 +584,11 @@ li::marker {
   .foodscope-logo {
     width: 46px;
     height: 46px;
+  }
+
+  .fifa-logo {
+    width: 58px;
+    height: 74px;
   }
 
   .contact-links {

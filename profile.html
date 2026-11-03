@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Ahad Hashmani is a product and data analytics professional and UT Austin M.S. Data Science candidate with experience in SaaS, financial analytics, and operations." />
+  <meta name="description" content="Ahad Hashmani is a UT Austin data science graduate student working across product analytics, data engineering, AI, and business operations." />
   <meta name="theme-color" content="#0b1120" />
-  <title>Ahad Hashmani | Product & Data Analytics</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahad Hashmani | Product, Data & AI" />
+  <meta property="og:description" content="Projects and experience across product analytics, data engineering, AI, and business operations." />
+  <title>Ahad Hashmani | Product, Data &amp; AI</title>
   <link rel="stylesheet" href="profilestye.css" />
 </head>
 <body id="top">
@@ -49,6 +52,7 @@
         <div class="hero-buttons">
           <a href="#experience" class="btn btn-primary">Explore my experience</a>
           <a href="#contact" class="btn btn-secondary">Get in touch</a>
+          <a href="https://github.com/AhadHashmani" class="btn btn-secondary" target="_blank" rel="noopener">Explore my GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <div class="hero-side">
@@ -191,34 +195,58 @@
       <!-- Projects Section -->
       <section id="projects" class="card content-section">
         <p class="section-label">SELECTED WORK</p>
-        <h2>Projects &amp; research</h2>
+        <h2>Projects built to solve real problems</h2>
+        <p class="section-intro">From search algorithms to forecasting and data systems, these projects show how I turn technical work into useful tools. Explore the source code on GitHub.</p>
         <div class="project-grid">
 
-          <div class="project-card featured-project">
-            <p class="project-kicker">FEATURED PROJECT</p>
-            <h3>Modular ETL &amp; Data Quality Framework</h3>
-            <span class="project-subtitle">Python · pandas · SQLite</span>
-            <p>Built reusable ingestion and transformation components using 10,000-row CSV chunks, deduplication, missing-value handling, and schema checks. Added quality reports, logs, and retries to produce repeatable analytical datasets.</p>
-          </div>
+          <article class="project-card featured-project">
+            <p class="project-kicker">FEATURED · NVIDIA DEVELOPER PROGRAM</p>
+            <h3>NVIDIA Developer Program</h3>
+            <span class="project-subtitle">AI robotics orchestration · Claude · FastAPI · Streamlit</span>
+            <p>Built an AI-powered warehouse robotics orchestration platform, pairing a Claude agent with a FastAPI backend and Streamlit dashboard. The portfolio also describes NVIDIA Isaac Sim integration and Docker-based deployment.</p>
+            <a class="project-link" href="https://github.com/AhadHashmani/RoboticsOps" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
+          </article>
 
-          <div class="project-card">
+          <article class="project-card">
+            <h3>ChessMind Engine</h3>
+            <span class="project-subtitle">Python · alpha-beta search · UCI</span>
+            <p>Built a chess engine from scratch with iterative-deepening search, move-ordering heuristics, a Zobrist-hashed transposition table, and a PGN annotator for move quality.</p>
+            <a class="project-link" href="https://github.com/AhadHashmani/chessmind-engine" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <h3>ScorecastML</h3>
+            <span class="project-subtitle">Python · scikit-learn · time-series validation</span>
+            <p>Created an NBA game-outcome prediction pipeline with rolling team-form features, a time-based holdout, and Logistic Regression versus Gradient Boosting evaluation.</p>
+            <a class="project-link" href="https://github.com/AhadHashmani/scorecastml" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <h3>Modular ETL &amp; Data Quality</h3>
+            <span class="project-subtitle">Python · pandas · SQLite</span>
+            <p>Designed a production-style ingestion framework with chunked processing, retries, schema validation, and data-quality reporting for repeatable analytical datasets.</p>
+            <a class="project-link" href="https://github.com/AhadHashmani/data-engineering-portfolio/tree/main/etl-pipeline" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <h3>E. coli Geospatial Risk Analysis</h3>
+            <span class="project-subtitle">UT Austin · environmental data · Python</span>
+            <p>Analyzed more than 200,000 environmental records to map exposure risk across Austin ZIP codes and identify areas for closer review.</p>
+            <a class="project-link" href="https://github.com/AhadHashmani/Ecoli-Concentration-Austin-Data-Science-CAPSTONE" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <h3>Econometrics &amp; Numerical Methods</h3>
+            <span class="project-subtitle">NumPy · SciPy · statistical computing</span>
+            <p>Implemented OLS with robust standard errors and multicollinearity diagnostics, alongside root-finding algorithms and convergence analysis.</p>
+            <a class="project-link" href="https://github.com/AhadHashmani/data-engineering-portfolio" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card">
             <h3>Maxel Lab (UPenn)</h3>
             <span class="project-subtitle">Data Systems Research Fellowship</span>
-            <p>Provided data science research support across AI domains, applying statistical analysis and pipeline development to accelerate workflows for multidisciplinary researchers.</p>
-          </div>
-
-          <div class="project-card">
-            <h3>NVIDIA Developer Program</h3>
-            <span class="project-subtitle">AI Robotics Orchestration Platform</span>
-            <p>Integrated NVIDIA Isaac Sim 6G tools with a multi-turn Claude AI agent in a full-stack application (FastAPI, Streamlit, PostgreSQL) deployed with Docker across 3 OS models.</p>
-          </div>
-
-          <div class="project-card">
-            <h3>Spatiotemporal E. coli Modeling</h3>
-            <span class="project-subtitle">UT Austin Computational Research</span>
-            <p>Engineered predictive health risk models (weather API, 200K+ records) identifying 24% elevated exposure zones; designed visualizations to prioritize intervention strategy.</p>
-          </div>
-
+            <p>Supported multidisciplinary AI research with statistical analysis and data pipeline development to improve research workflows.</p>
+          </article>
         </div>
       </section>
 
@@ -270,6 +298,20 @@
               <span>Trello</span>
               <span>monday.com</span>
               <span>PowerPoint</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Modeling &amp; engineering</h4>
+            <div class="tag-cloud">
+              <span>scikit-learn</span>
+              <span>Gradient Boosting</span>
+              <span>Time-series validation</span>
+              <span>FastAPI</span>
+              <span>Streamlit</span>
+              <span>PostgreSQL</span>
+              <span>Docker</span>
+              <span>Statistical modeling</span>
             </div>
           </div>
 

@@ -71,3 +71,40 @@ if ("IntersectionObserver" in window) {
 
   sections.forEach((section) => sectionObserver.observe(section));
 }
+
+const projectFilters = document.querySelectorAll("[data-project-filter]");
+const projectCards = document.querySelectorAll("[data-project-categories]");
+const projectResults = document.querySelector(".project-results");
+
+function filterProjects(filter) {
+  let visibleProjects = 0;
+
+  projectCards.forEach((card) => {
+    const categories = card.dataset.projectCategories.split(" ");
+    const isVisible = filter === "all" || categories.includes(filter);
+
+    card.hidden = !isVisible;
+    visibleProjects += Number(isVisible);
+  });
+
+  projectFilters.forEach((button) => {
+    const isActive = button.dataset.projectFilter === filter;
+
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  projectResults.textContent = `Showing ${visibleProjects} ${
+    visibleProjects === 1 ? "project" : "projects"
+  }`;
+}
+
+if (projectFilters.length && projectCards.length && projectResults) {
+  projectFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterProjects(button.dataset.projectFilter);
+    });
+  });
+
+  filterProjects("all");
+}

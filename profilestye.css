@@ -471,6 +471,51 @@ li::marker {
   margin-top: 22px;
 }
 
+.project-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-filter {
+  min-height: 38px;
+  padding: 7px 12px;
+  color: var(--muted);
+  background-color: rgba(8, 16, 29, 0.45);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-filter:hover,
+.project-filter.is-active {
+  color: var(--text);
+  background-color: #1a2a40;
+  border-color: #4a7185;
+}
+
+.project-filter.is-active {
+  box-shadow: inset 0 0 0 1px rgba(118, 227, 208, 0.16);
+}
+
+.project-results {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .project-card {
   display: flex;
   min-height: 225px;
@@ -480,6 +525,10 @@ li::marker {
   border: 1px solid var(--border);
   border-radius: 9px;
   transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card[hidden] {
+  display: none;
 }
 
 .project-kicker {
@@ -724,6 +773,11 @@ body.motion-ready .reveal-item.is-visible {
   .education-grid,
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .leadership-content {

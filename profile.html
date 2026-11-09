@@ -197,9 +197,18 @@
         <p class="section-label">SELECTED WORK</p>
         <h2>Projects built to solve real problems</h2>
         <p class="section-intro">From search algorithms to forecasting and data systems, these projects show how I turn technical work into useful tools. Explore the source code on GitHub.</p>
+        <div class="project-toolbar">
+          <div class="project-filters" role="group" aria-label="Filter projects by focus">
+            <button class="project-filter is-active" type="button" data-project-filter="all" aria-pressed="true">All work</button>
+            <button class="project-filter" type="button" data-project-filter="ai" aria-pressed="false">AI &amp; machine learning</button>
+            <button class="project-filter" type="button" data-project-filter="data" aria-pressed="false">Data engineering</button>
+            <button class="project-filter" type="button" data-project-filter="research" aria-pressed="false">Research</button>
+          </div>
+          <p class="project-results" aria-live="polite" aria-atomic="true"></p>
+        </div>
         <div class="project-grid">
 
-          <article class="project-card featured-project">
+          <article class="project-card featured-project" data-project-categories="ai">
             <p class="project-kicker">FEATURED · NVIDIA DEVELOPER PROGRAM</p>
             <h3>AI Robotics Orchestration Platform</h3>
             <span class="project-subtitle">NVIDIA Isaac Sim · Claude · FastAPI · Streamlit · PostgreSQL</span>
@@ -207,42 +216,42 @@
             <a class="project-link" href="https://github.com/AhadHashmani/RoboticsOps" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-project-categories="ai">
             <h3>ChessMind Engine</h3>
             <span class="project-subtitle">Python · alpha-beta search · UCI</span>
             <p>Built a chess engine from scratch with iterative-deepening search, move-ordering heuristics, a Zobrist-hashed transposition table, and a PGN annotator for move quality.</p>
             <a class="project-link" href="https://github.com/AhadHashmani/chessmind-engine" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-project-categories="ai">
             <h3>ScorecastML</h3>
             <span class="project-subtitle">Python · scikit-learn · time-series validation</span>
             <p>Created an NBA game-outcome prediction pipeline with rolling team-form features, a time-based holdout, and Logistic Regression versus Gradient Boosting evaluation.</p>
             <a class="project-link" href="https://github.com/AhadHashmani/scorecastml" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-project-categories="data">
             <h3>Modular ETL &amp; Data Quality</h3>
             <span class="project-subtitle">Python · pandas · SQLite</span>
             <p>Designed a production-style ingestion framework with chunked processing, retries, schema validation, and data-quality reporting for repeatable analytical datasets.</p>
             <a class="project-link" href="https://github.com/AhadHashmani/data-engineering-portfolio/tree/main/etl-pipeline" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-project-categories="research">
             <h3>E. coli Geospatial Risk Analysis</h3>
             <span class="project-subtitle">UT Austin · environmental data · Python</span>
             <p>Analyzed more than 200,000 environmental records to map exposure risk across Austin ZIP codes and identify areas for closer review.</p>
             <a class="project-link" href="https://github.com/AhadHashmani/Ecoli-Concentration-Austin-Data-Science-CAPSTONE" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-project-categories="research">
             <h3>Econometrics &amp; Numerical Methods</h3>
             <span class="project-subtitle">NumPy · SciPy · statistical computing</span>
             <p>Implemented OLS with robust standard errors and multicollinearity diagnostics, alongside root-finding algorithms and convergence analysis.</p>
             <a class="project-link" href="https://github.com/AhadHashmani/data-engineering-portfolio" target="_blank" rel="noopener">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-project-categories="research">
             <h3>Maxel Lab (UPenn)</h3>
             <span class="project-subtitle">Data Systems Research Fellowship</span>
             <p>Supported multidisciplinary AI research with statistical analysis and data pipeline development to improve research workflows.</p>

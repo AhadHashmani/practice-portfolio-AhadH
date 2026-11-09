@@ -75,13 +75,19 @@ if ("IntersectionObserver" in window) {
 const projectFilters = document.querySelectorAll("[data-project-filter]");
 const projectCards = document.querySelectorAll("[data-project-categories]");
 const projectResults = document.querySelector(".project-results");
+const projectSearch = document.querySelector("[data-project-search]");
+const printButton = document.querySelector("[data-print-page]");
 
-function filterProjects(filter) {
+function filterProjects(filter, query = "") {
   let visibleProjects = 0;
+  const searchTerm = query.trim().toLocaleLowerCase();
 
   projectCards.forEach((card) => {
     const categories = card.dataset.projectCategories.split(" ");
-    const isVisible = filter === "all" || categories.includes(filter);
+    const matchesCategory = filter === "all" || categories.includes(filter);
+    const matchesSearch =
+      !searchTerm || card.textContent.toLocaleLowerCase().includes(searchTerm);
+    const isVisible = matchesCategory && matchesSearch;
 
     card.hidden = !isVisible;
     visibleProjects += Number(isVisible);
@@ -94,17 +100,26 @@ function filterProjects(filter) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  projectResults.textContent = `Showing ${visibleProjects} ${
-    visibleProjects === 1 ? "project" : "projects"
-  }`;
+  projectResults.textContent = visibleProjects
+    ? `Showing ${visibleProjects} of ${projectCards.length} projects`
+    : "No projects match. Try another search or category.";
 }
 
 if (projectFilters.length && projectCards.length && projectResults) {
   projectFilters.forEach((button) => {
     button.addEventListener("click", () => {
-      filterProjects(button.dataset.projectFilter);
+      filterProjects(button.dataset.projectFilter, projectSearch?.value);
     });
+  });
+
+  projectSearch?.addEventListener("input", () => {
+    const activeFilter = document.querySelector(
+      ".project-filter[aria-pressed='true']",
+    );
+    filterProjects(activeFilter?.dataset.projectFilter ?? "all", projectSearch.value);
   });
 
   filterProjects("all");
 }
+
+printButton?.addEventListener("click", () => window.print());

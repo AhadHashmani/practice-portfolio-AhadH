@@ -12,9 +12,10 @@
   <link rel="stylesheet" href="profilestye.css" />
 </head>
 <body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="scroll-progress" aria-hidden="true"></div>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary navigation">
     <div class="nav-container">
       <a class="nav-brand" href="#top">AH<span>.</span></a>
       <div class="nav-links">
@@ -33,7 +34,7 @@
     <header class="card hero-card">
       <div class="hero-info">
         <div class="hero-heading">
-          <img src="profile-portrait.png" alt="Portrait of Ahad Hashmani" class="profile-photo" />
+          <img src="profile-portrait.png" alt="Portrait of Ahad Hashmani" class="profile-photo" fetchpriority="high" decoding="async" />
           <div>
             <p class="eyebrow">BUSINESS OPERATIONS <span>•</span> DATA ANALYTICS</p>
             <h1>Ahad Hashmani</h1>
@@ -53,6 +54,7 @@
           <a href="#experience" class="btn btn-primary">Explore my experience</a>
           <a href="#contact" class="btn btn-secondary">Get in touch</a>
           <a href="https://github.com/AhadHashmani" class="btn btn-secondary" target="_blank" rel="noopener">Explore my GitHub <span aria-hidden="true">↗</span></a>
+          <button class="btn btn-secondary print-button" type="button" data-print-page>Save as PDF</button>
         </div>
       </div>
       <div class="hero-side">
@@ -81,7 +83,7 @@
       </div>
     </div>
 
-    <main>
+    <main id="main-content">
       <section id="about" class="card content-section">
         <p class="section-label">PROFILE</p>
         <h2>Analytics grounded in real product questions.</h2>
@@ -120,7 +122,7 @@
           <div class="timeline-header company-header">
             <div class="company-name">
               <span class="company-logo togetherwork-logo">
-                <img src="togetherwork-logo.svg" alt="Togetherwork logo" />
+                <img src="togetherwork-logo.svg" alt="Togetherwork logo" loading="lazy" decoding="async" />
               </span>
               <div>
                 <h3>Togetherwork</h3>
@@ -140,7 +142,7 @@
           <div class="timeline-header company-header">
             <div class="company-name">
               <span class="company-logo fifa-logo">
-                <img src="fifa-world-cup-2026.svg" alt="2026 FIFA World Cup emblem" />
+                <img src="fifa-world-cup-2026.svg" alt="2026 FIFA World Cup emblem" loading="lazy" decoding="async" />
               </span>
               <div>
                 <h3>FIFA World Cup 26</h3>
@@ -159,7 +161,7 @@
           <div class="timeline-header company-header">
             <div class="company-name">
               <span class="company-logo foodscope-logo">
-                <img src="foodscope-logo.png" alt="FoodScope logo" />
+                <img src="foodscope-logo.png" alt="FoodScope logo" loading="lazy" decoding="async" />
               </span>
               <div>
                 <h3>FoodScope AI</h3>
@@ -204,8 +206,12 @@
             <button class="project-filter" type="button" data-project-filter="data" aria-pressed="false">Data engineering</button>
             <button class="project-filter" type="button" data-project-filter="research" aria-pressed="false">Research</button>
           </div>
-          <p class="project-results" aria-live="polite" aria-atomic="true"></p>
+          <label class="project-search-label">
+            <span class="visually-hidden">Search projects by name or technology</span>
+            <input class="project-search" type="search" placeholder="Search projects or tools" autocomplete="off" data-project-search />
+          </label>
         </div>
+        <p class="project-results" role="status" aria-live="polite" aria-atomic="true"></p>
         <div class="project-grid">
 
           <article class="project-card featured-project" data-project-categories="ai">
